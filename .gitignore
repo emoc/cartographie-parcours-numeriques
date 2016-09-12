@@ -1,7 +1,7 @@
 # mots de passe, etc.
 #####################
 
-# mis_de_cote/**
+mis_de_cote/**
 web/carte/__test_embed_enligne.htm
 web/carte/_inc/init.php
 web/carte/_inc/init_LOCAL.php
