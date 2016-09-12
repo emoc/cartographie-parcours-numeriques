@@ -1,0 +1,26 @@
+# mots de passe, etc.
+#####################
+
+# mis_de_cote/**
+web/carte/__test_embed_enligne.htm
+web/carte/_inc/init.php
+web/carte/_inc/init_LOCAL.php
+web/carte/_inc/init_ONLINE.php
+# web/carte/actupix/**
+# web/carte/modifier/assets/**
+yii/protected/config/database.php
+yii/protected/config/database_LOCAL.php
+yii/protected/config/database_ONLINE.php
+yii/protected/config/main.php
+
+# OS generated files #
+######################
+
+**/.DS_Store
+**/.DS_Store?
+**/._*
+**/.Spotlight-V100
+**/.Trashes
+**/ehthumbs.db
+**/Thumbs.db
+**/desktop.ini

@@ -1,0 +1,258 @@
+/*
+    gris teinté rouge : 112,  99,  99    #706363
+    
+    parchemin         : 241, 238, 232    #F1EEE8
+    parchemin + clair : 252, 249, 243    #FCF9F3
+    parchemin + sombre: 229, 226, 220    #E5E2DC
+    
+    orangé            : 227, 116,  89    #E37459
+
+EE9A76 / 238,154,118
+E37459 / 227,116,89
+
+    f9ffb5 / 249, 255, 181 : jaune pour surligner
+    
+    couleurs d'icones
+        
+    58f2e6 / 88, 242, 230 : bleu icone lieu (associations)
+    d4ff79 / 212, 255, 121 : vert icone lieu (entreprise)
+    fff881 / 255, 248, 129 : jaune icone lieu (réserve)
+    ff4e50 / 255, 78, 80 : rouge icone lieu (pratiques artistiques)
+*/
+
+@font-face {
+    font-family: 'NowRegular';
+    src: url('./now/Now-Regular.otf');
+}
+
+html, body, #map {
+    height: 100%;
+    /*font: 10pt "Helvetica Neue", Arial, Helvetica, sans-serif;*/
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'NowRegular';
+    font-size:10pt;
+    line-height: 1.6;
+    font-weight: normal;
+    font-style: normal;
+}
+
+button, input, select, textarea {
+    font-family : inherit;
+    font-size   : 100%;
+}
+
+/* styles des popups leaflet ************************************************ */
+
+.leaflet-popup-content-wrapper {
+    font-family: 'NowRegular';
+    font-size:8pt;
+    background-color: rgb(252, 249, 243);
+}
+.leaflet-popup-content {
+    width:100%; 
+    max-height:280px; 
+    overflow:auto;
+	margin: 18px 9px 18px 9px;
+	line-height: 1.4;  
+    /*clear:both;*/    
+}
+
+.closepopup {
+    float: right;
+}
+
+.popuponclick {
+    clear: both;
+}    
+/*
+.popupspacer {
+    margin: 18px 9px 18px 9px;
+}  */
+
+.actuheader {
+    color: #E37459;
+    margin-bottom: 5px;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+	background-color: rgb(252, 249, 243);
+	box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+}
+.leaflet-container a.leaflet-popup-close-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 4px 4px 0 0;
+	text-align: center;
+	width: 18px;
+	height: 14px;
+	font: 14px Tahoma, Verdana, sans-serif;
+	color: #000;
+	text-decoration: none;
+	font-weight: bold;
+	background: transparent;
+
+}
+/*
+.leaflet-popup-close-button {
+    margin: 0px 0px 13px 0px;
+}*/
+.leaflet-popup-content-title {
+    background-color: rgb(112,  99,  99);
+    color: rgb(255, 255, 255);
+    margin-bottom:0;
+    font-size:8pt;
+    letter-spacing:1px;
+    line-height:2;
+    text-align:center;
+    width:100%;
+}
+.leaflet-popup-content-articlelink {
+    background-color: rgb(249, 255, 181);
+    color: rgb(255, 255, 255);
+    margin-bottom:0;
+    font-size:8pt;
+    letter-spacing:1px;
+    line-height:2;
+    text-align:center;
+    width:100%;
+}
+
+.leaflet-popup-content strong{
+    font-weight:bold;
+}
+
+.leaflet-popup-content a{
+    color: rgb(227, 116,  89);
+    text-decoration: none;
+}
+
+.leaflet-popup-content img{
+    margin: 0;
+}
+
+.leaflet-fade-anim .actu-popup {
+  transition: none;
+}
+
+/*
+.leaflet-popup-tip-container {
+    background-color: rgb(252, 249, 243);
+}*/
+
+/* styles pour la sidebar *************************************************** */
+.sidebar-header {
+    color: #fff;
+    /*background-color: #706363;*/ 
+    background-color: rgb(227,116,89); 
+}
+
+.sidebar-tabs {
+    background-color: rgb(229, 226, 220);
+    
+}
+.sidebar-content {
+    /*background-color: rgba(241, 238, 232, 0.95)*/; 
+    background-color: rgba(252, 249, 243, 0.95);    
+    
+}
+.sidebar-tabs > li:hover, .sidebar-tabs > ul > li:hover {
+    color: #000;
+    background-color: #eee; 
+}
+.sidebar-tabs > li.active, .sidebar-tabs > ul > li.active {
+    color: #fff;
+    background-color: rgb(227,116,89); 
+}
+
+.sidebar-pane > p > a, .sidebar-pane > a {
+    color: rgb(227,116,89);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* clusters ***************************************************************** */
+.mycluster {
+	width: 80px;
+	height: 80px;
+    font-family: 'NowRegular';
+    background-image: url('../_pix/cluster-large.png');
+    background-repeat: no-repeat;
+    background-position: 4px 0px;
+	/*background-color: white;*/
+    padding-top:18px;
+    padding-left:-2px;
+	text-align: center;
+	font-size: 8pt;
+    font-weight: bold;
+}
+
+/* social ******************************************************************* */
+
+#socialicons {
+	text-align: center;
+}
+#socialicons .icon{
+	color: #706363;
+	display: inline-block;
+	font-size: 16px;
+	text-align: center;
+    vertical-align: middle; /* TEST */
+	margin: 0 6px 5px;
+    transition: all 0.2s ease-in-out;
+}
+#socialicons .icon:hover{
+	color: #E37459;
+    opacity: .7;
+}
+
+#socialicons .autres {
+    /*font-family: Arial, Sans-Serif;*/
+    font-family: 'NowRegular';
+    font-size: 16px;
+    line-height: 15px;
+    vertical-align: middle;
+}
+
+/* formulaire "embed" du code *********************************************** */
+
+#lien_partage {
+    padding:10px;
+    border:1px solid #E5E2DC;
+    border-radius:5px;
+    width:95%;
+    height:100px;
+    box-shadow:1px 1px 3px #E5E2DC inset;
+    resize: vertical;
+}
+
+/* tables des éléments à cocher ********************************************* */
+table.fixed {
+    table-layout:fixed; 
+    width:100%;
+    word-break:break-all;
+}
+table.fixed td {
+    overflow:hidden;
+    vertical-align: top;
+}
+table.fixed td:nth-of-type(1) {width:50%;}
+table.fixed td:nth-of-type(2) {width:50%;}
+
+/* formulaire de légendes *************************************************** */
+fieldset {
+ padding:10px 10px 10px 10px;
+ margin-left: 20px;
+ margin-right: 20px;
+ margin-bottom:10px;
+ border:3px solid #E5E2DC;
+ border-radius: 10px;
+}
+legend {
+ color: #706363;
+ font-weight:bold;
+}
